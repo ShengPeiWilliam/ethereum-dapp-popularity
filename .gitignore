@@ -218,3 +218,12 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# data
+data/
+
+# macOS
+.DS_Store
+
+# discussion notes (shared on Google Drive)
+docs/
