@@ -1,7 +1,11 @@
-# ethereum-dapp-popularity
+# Ethereum DApp Popularity
 
-Early-activity features for Ethereum DApps, computed from the public BigQuery Ethereum dataset.
-For each DApp: contract addresses → first 30 days of transactions → one row of features.
+We study how Ethereum DApps grow and fade, using public on-chain data.
+
+- What separates DApps that keep growing from those that spike and fade?
+- Can the first weeks after launch tell us which DApps will become popular?
+
+Right now the code takes a DApp's contract addresses and measures its first 30 days of activity.
 
 ## Run
 
@@ -12,11 +16,8 @@ gcloud auth application-default login
 python main.py
 ```
 
-Writes `data/pilot_features.csv` (one row per DApp) and `data/pilot_daily_active_wallets.csv`.
-One run scans about 12 GB in BigQuery.
+To change the DApps or the window length, edit `config.py`.
 
-## Layout
+## Shared files
 
-- `config.py`: DApp list (`PILOT_DAPPS`), window length (`WINDOW_DAYS`), BigQuery project
-- `sql/`: the two queries (deploy date, wallet activity)
-- `src/`: one file per pipeline step, called in order by `main.py`
+Discussion notes, the Feature Dictionary, and results are in the [shared Google Drive folder](https://drive.google.com/drive/folders/14pnCcbBcztvvUGyhA2NYVJNclz36J0j2).
