@@ -227,3 +227,5 @@ data/
 
 # discussion notes (shared on Google Drive)
 docs/
+.Rproj.user
+figures/
